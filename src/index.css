@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Rise Community Enhanced Mobile Theme */
+    --background: 0 0% 6%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 89% 58%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 14 100% 65%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 89% 58%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 0 89% 58%;
+
+    --radius: 1rem;
+
+    /* Enhanced Rise Community Colors */
+    --rise-red: 0 92% 60%;
+    --rise-red-light: 0 92% 70%;
+    --rise-red-dark: 0 85% 45%;
+    --rise-red-darker: 0 80% 40%;
+    --rise-orange: 28 100% 60%;
+    --rise-purple: 280 85% 65%;
+    --rise-blue: 220 88% 65%;
+    --rise-dark: 220 18% 4%;
+    --rise-dark-card: 220 22% 6%;
+    --rise-dark-elevated: 220 24% 8%;
+    --rise-gray: 220 15% 70%;
+    --rise-success: 142 78% 38%;
+
+    /* Enhanced Professional Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(0 92% 60%) 0%, hsl(28 100% 60%) 50%, hsl(280 85% 65%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(220 18% 4%) 0%, hsl(220 22% 6%) 50%, hsl(220 24% 8%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(220 22% 6% / 0.9) 0%, hsl(220 24% 8% / 0.95) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(220 18% 4%) 0%, hsl(220 22% 6%) 30%, hsl(220 24% 8%) 70%, hsl(220 22% 6%) 100%);
+    --gradient-glow: radial-gradient(circle at center, hsl(0 92% 60% / 0.15) 0%, hsl(280 85% 65% / 0.1) 40%, transparent 70%);
+    --gradient-accent: linear-gradient(90deg, hsl(220 88% 65%) 0%, hsl(280 85% 65%) 50%, hsl(0 92% 60%) 100%);
+    
+    /* Professional Enhanced Shadows */
+    --shadow-primary: 0 25px 50px -12px hsl(0 92% 60% / 0.35);
+    --shadow-secondary: 0 12px 35px -6px hsl(0 0% 0% / 0.7);
+    --shadow-glow: 0 0 80px hsl(0 92% 60% / 0.4), 0 0 120px hsl(280 85% 65% / 0.2);
+    --shadow-card: 0 10px 40px hsl(0 0% 0% / 0.4), 0 4px 12px hsl(0 0% 0% / 0.3);
+    --shadow-elegant: 0 30px 80px -15px hsl(0 92% 60% / 0.4), 0 0 100px hsl(280 85% 65% / 0.15);
+
+    /* Animations */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  @keyframes neon-slide {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  .neon-sliding {
+    background: linear-gradient(
+      90deg,
+      white 0%,
+      white 40%,
+      #dc2626 48%,
+      #dc2626 52%,
+      white 60%,
+      white 100%
+    );
+    background-size: 500% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: neon-slide 12s linear infinite;
+  }
+
+  .dark {
+    /* Same as root since we're using dark theme by default */
+    --background: 0 0% 8%;
+    --foreground: 0 0% 95%;
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 12%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 0 84% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 0 84% 55%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 0 84% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  /* Custom scrollbar */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: hsl(var(--rise-dark-card));
+    border-radius: 3px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: hsl(var(--rise-red));
+    border-radius: 3px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--rise-red-dark));
+  }
+}
