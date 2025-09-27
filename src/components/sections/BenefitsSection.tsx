@@ -101,13 +101,9 @@ export function BenefitsSection() {
                       `
                     }}>
                       {/* App content */}
-                      <LazyImage 
-                        src="https://raw.githubusercontent.com/user/repo/main/mockup-image-left.png" 
-                        alt="Rise Community Interface" 
-                        className="w-full h-full object-contain"
-                        wrapperClassName="w-full h-full"
-                        priority={true}
-                      />
+                      <div className="w-full h-full bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg flex items-center justify-center">
+                        <div className="text-primary text-sm opacity-60">Interface Preview</div>
+                      </div>
                       {/* Ultra-realistic screen reflection layers */}
 <div className="hidden md:block absolute inset-0 bg-gradient-to-br from-white/12 via-transparent to-black/25 pointer-events-none"></div>
 <div className="hidden md:block absolute inset-0 bg-gradient-to-tr from-transparent via-white/4 to-transparent pointer-events-none"></div>
@@ -239,13 +235,9 @@ export function BenefitsSection() {
                       `
                     }}>
                       {/* App content */}
-                      <LazyImage 
-                        src="https://raw.githubusercontent.com/user/repo/main/mockup-image-2.png" 
-                        alt="Rise Community Interface" 
-                        className="w-full h-full object-contain"
-                        wrapperClassName="w-full h-full"
-                        priority={true}
-                      />
+                      <div className="w-full h-full bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg flex items-center justify-center">
+                        <div className="text-primary text-sm opacity-60">Interface Preview</div>
+                      </div>
                       {/* Ultra-realistic screen reflection layers */}
 <div className="hidden md:block absolute inset-0 bg-gradient-to-br from-white/12 via-transparent to-black/25 pointer-events-none"></div>
 <div className="hidden md:block absolute inset-0 bg-gradient-to-tr from-transparent via-white/4 to-transparent pointer-events-none"></div>
