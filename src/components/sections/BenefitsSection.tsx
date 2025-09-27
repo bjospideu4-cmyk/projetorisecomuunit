@@ -102,9 +102,9 @@ export function BenefitsSection() {
                     }}>
                       {/* App content */}
                       <img 
-                        src="https://i.ibb.co/rfQ26p8F/Whats-App-Image-2025-09-27-at-12-50-09-1.jpg" 
+                        src="https://i.ibb.co/CswK79Cm/Whats-App-Image-2025-09-27-at-12-50-09-1.jpg" 
                         alt="Rise Community Interface" 
-                        className="w-full h-full object-contain object-center rounded-lg"
+                        className="w-full h-full object-cover object-center rounded-lg"
                         loading="eager"
                         decoding="async"
                       />
@@ -240,9 +240,9 @@ export function BenefitsSection() {
                     }}>
                       {/* App content */}
                       <img 
-                        src="https://i.ibb.co/CswK79Cm/Whats-App-Image-2025-09-27-at-12-50-09-1.jpg" 
+                        src="https://i.ibb.co/rfQ26p8F/Whats-App-Image-2025-09-27-at-12-50-09-1.jpg" 
                         alt="Rise Community Interface" 
-                        className="w-full h-full object-contain object-center rounded-lg"
+                        className="w-full h-full object-cover object-center rounded-lg"
                         loading="eager"
                         decoding="async"
                       />
