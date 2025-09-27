@@ -26,33 +26,36 @@ export function PricingSection() {
             
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
-              <article className="group rounded-xl bg-gradient-card border border-white/20 p-3 hover:border-rise-blue/40 hover:shadow-elegant transition-all duration-300">
-                <div className="flex items-center gap-2 mb-2">
-                  <div className="w-6 h-6 bg-background border border-border rounded-lg flex items-center justify-center text-sm flex-shrink-0">📅</div>
-                  <h3 className="font-semibold text-sm group-hover:text-transparent group-hover:bg-gradient-primary group-hover:bg-clip-text transition-all duration-300 leading-tight">Atualizações Semanais</h3>
-                </div>
-                <p className="text-xs text-rise-gray opacity-80 leading-relaxed">Toda semana novos cursos, apostilas e ferramentas adicionados ao acervo, garantindo conteúdo sempre atualizado.</p>
+              <article className="group rounded-2xl bg-gradient-card border border-white/20 p-4 hover:border-rise-red/40 hover:shadow-elegant transition-all duration-300">
+                <header className="flex items-center gap-2 mb-1">
+                  <span className="text-xl leading-none shrink-0">📅</span>
+                  <h3 className="text-base md:text-lg font-bold leading-tight tracking-tight">Atualizações Semanaais</h3>
+                </header>
+                <p className="text-sm text-rise-gray leading-relaxed">Toda semana novos cursos, apostilas e ferramentas adicionados ao acervo, garantindo conteúdo sempre atualizado.</p>
               </article>
-              <article className="group rounded-xl bg-gradient-card border border-white/20 p-3 hover:border-rise-purple/40 hover:shadow-elegant transition-all duration-300">
-                <div className="flex items-center gap-2 mb-2">
-                  <div className="w-6 h-6 bg-background border border-border rounded-lg flex items-center justify-center text-sm flex-shrink-0">🤖</div>
-                  <h3 className="font-semibold text-sm group-hover:text-transparent group-hover:bg-gradient-primary group-hover:bg-clip-text transition-all duration-300 leading-tight">Agentes de IA Exclusivos</h3>
-                </div>
-                <p className="text-xs text-rise-gray opacity-80 leading-relaxed">Ferramentas inteligentes criadas para turbinar seus estudos, negócios e automações.</p>
+              
+              <article className="group rounded-2xl bg-gradient-card border border-white/20 p-4 hover:border-rise-red/40 hover:shadow-elegant transition-all duration-300">
+                <header className="flex items-center gap-2 mb-1">
+                  <span className="text-xl leading-none shrink-0">🤖</span>
+                  <h3 className="text-base md:text-lg font-bold leading-tight tracking-tight">Agentes de IA Exclusivos</h3>
+                </header>
+                <p className="text-sm text-rise-gray leading-relaxed">Ferramentas inteligentes criadas para turbinar seus estudos, negócios e automações.</p>
               </article>
-              <article className="group rounded-xl bg-gradient-card border border-white/20 p-3 hover:border-rise-orange/40 hover:shadow-elegant transition-all duration-300">
-                <div className="flex items-center gap-2 mb-2">
-                  <div className="w-6 h-6 bg-background border border-border rounded-lg flex items-center justify-center text-sm flex-shrink-0">🔍</div>
-                  <h3 className="font-semibold text-sm group-hover:text-transparent group-hover:bg-gradient-primary group-hover:bg-clip-text transition-all duration-300 leading-tight">Puxador de Dados Vitalício</h3>
-                </div>
-                <p className="text-xs text-rise-gray opacity-80 leading-relaxed">Tenha acesso ao nosso Puxador de Dados exclusivo da Rise Community, funcionando 24/7, com puxadas ilimitadas e acesso vitalício garantido.</p>
+
+              <article className="group rounded-2xl bg-gradient-card border border-white/20 p-4 hover:border-rise-red/40 hover:shadow-elegant transition-all duration-300">
+                <header className="flex items-center gap-2 mb-1">
+                  <span className="text-xl leading-none shrink-0">🔍</span>
+                  <h3 className="text-base md:text-lg font-bold leading-tight tracking-tight">Puxador de Dados Vitalício</h3>
+                </header>
+                <p className="text-sm text-rise-gray leading-relaxed">Tenha acesso ao nosso Puxador de Dados exclusivo da Rise Community, funcionando 24/7, com puxadas ilimitadas e acesso vitalício garantido.</p>
               </article>
-              <article className="group rounded-xl bg-gradient-card border border-white/20 p-3 hover:border-rise-green/40 hover:shadow-elegant transition-all duration-300">
-                <div className="flex items-center gap-2 mb-2">
-                  <div className="w-6 h-6 bg-background border border-border rounded-lg flex items-center justify-center text-sm flex-shrink-0">📦</div>
-                  <h3 className="font-semibold text-sm group-hover:text-transparent group-hover:bg-gradient-primary group-hover:bg-clip-text transition-all duration-300 leading-tight">Fornecedores de Rateio</h3>
-                </div>
-                <p className="text-xs text-rise-gray opacity-80 leading-relaxed">Após anos guardando a 7 chaves, liberamos acesso aos principais fornecedores utilizados atualmente pela comunidade.</p>
+
+              <article className="group rounded-2xl bg-gradient-card border border-white/20 p-4 hover:border-rise-red/40 hover:shadow-elegant transition-all duration-300">
+                <header className="flex items-center gap-2 mb-1">
+                  <span className="text-xl leading-none shrink-0">📦</span>
+                  <h3 className="text-base md:text-lg font-bold leading-tight tracking-tight">Fornecedores de Rateio</h3>
+                </header>
+                <p className="text-sm text-rise-gray leading-relaxed">Após anos guardando a 7 chaves, liberamos acesso aos principais fornecedores utilizados atualmente pela comunidade.</p>
               </article>
             </div>
             </div>
