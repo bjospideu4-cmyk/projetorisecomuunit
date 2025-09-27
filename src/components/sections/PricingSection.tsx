@@ -27,23 +27,31 @@ export function PricingSection() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
               <article className="group rounded-2xl bg-gradient-card border border-white/20 p-4 hover:border-rise-blue/40 hover:shadow-elegant transition-all duration-300">
-                <div className="w-12 h-12 bg-background border border-border rounded-xl flex items-center justify-center text-2xl mb-3">📅</div>
-                <h3 className="font-semibold text-base group-hover:text-transparent group-hover:bg-gradient-primary group-hover:bg-clip-text transition-all duration-300 mb-2">Atualizações Semanais</h3>
+                <div className="flex items-start gap-3 mb-3">
+                  <div className="w-12 h-12 bg-background border border-border rounded-xl flex items-center justify-center text-2xl flex-shrink-0">📅</div>
+                  <h3 className="font-semibold text-base group-hover:text-transparent group-hover:bg-gradient-primary group-hover:bg-clip-text transition-all duration-300 leading-tight">Atualizações Semanais</h3>
+                </div>
                 <p className="text-sm text-rise-gray opacity-80 leading-relaxed">Toda semana novos cursos, apostilas e ferramentas adicionados ao acervo, garantindo conteúdo sempre atualizado.</p>
               </article>
               <article className="group rounded-2xl bg-gradient-card border border-white/20 p-4 hover:border-rise-purple/40 hover:shadow-elegant transition-all duration-300">
-                <div className="w-12 h-12 bg-background border border-border rounded-xl flex items-center justify-center text-2xl mb-3">🤖</div>
-                <h3 className="font-semibold text-base group-hover:text-transparent group-hover:bg-gradient-primary group-hover:bg-clip-text transition-all duration-300 mb-2">Agentes de IA Exclusivos</h3>
+                <div className="flex items-start gap-3 mb-3">
+                  <div className="w-12 h-12 bg-background border border-border rounded-xl flex items-center justify-center text-2xl flex-shrink-0">🤖</div>
+                  <h3 className="font-semibold text-base group-hover:text-transparent group-hover:bg-gradient-primary group-hover:bg-clip-text transition-all duration-300 leading-tight">Agentes de IA Exclusivos</h3>
+                </div>
                 <p className="text-sm text-rise-gray opacity-80 leading-relaxed">Ferramentas inteligentes criadas para turbinar seus estudos, negócios e automações.</p>
               </article>
               <article className="group rounded-2xl bg-gradient-card border border-white/20 p-4 hover:border-rise-orange/40 hover:shadow-elegant transition-all duration-300">
-                <div className="w-12 h-12 bg-background border border-border rounded-xl flex items-center justify-center text-2xl mb-3">🔍</div>
-                <h3 className="font-semibold text-base group-hover:text-transparent group-hover:bg-gradient-primary group-hover:bg-clip-text transition-all duration-300 mb-2">Puxador de Dados Vitalício</h3>
+                <div className="flex items-start gap-3 mb-3">
+                  <div className="w-12 h-12 bg-background border border-border rounded-xl flex items-center justify-center text-2xl flex-shrink-0">🔍</div>
+                  <h3 className="font-semibold text-base group-hover:text-transparent group-hover:bg-gradient-primary group-hover:bg-clip-text transition-all duration-300 leading-tight">Puxador de Dados Vitalício</h3>
+                </div>
                 <p className="text-sm text-rise-gray opacity-80 leading-relaxed">Tenha acesso ao nosso Puxador de Dados exclusivo da Rise Community, funcionando 24/7, com puxadas ilimitadas e acesso vitalício garantido.</p>
               </article>
               <article className="group rounded-2xl bg-gradient-card border border-white/20 p-4 hover:border-rise-green/40 hover:shadow-elegant transition-all duration-300">
-                <div className="w-12 h-12 bg-background border border-border rounded-xl flex items-center justify-center text-2xl mb-3">📦</div>
-                <h3 className="font-semibold text-base group-hover:text-transparent group-hover:bg-gradient-primary group-hover:bg-clip-text transition-all duration-300 mb-2">Fornecedores de Rateio</h3>
+                <div className="flex items-start gap-3 mb-3">
+                  <div className="w-12 h-12 bg-background border border-border rounded-xl flex items-center justify-center text-2xl flex-shrink-0">📦</div>
+                  <h3 className="font-semibold text-base group-hover:text-transparent group-hover:bg-gradient-primary group-hover:bg-clip-text transition-all duration-300 leading-tight">Fornecedores de Rateio</h3>
+                </div>
                 <p className="text-sm text-rise-gray opacity-80 leading-relaxed">Após anos guardando a 7 chaves, liberamos acesso aos principais fornecedores utilizados atualmente pela comunidade.</p>
               </article>
             </div>
