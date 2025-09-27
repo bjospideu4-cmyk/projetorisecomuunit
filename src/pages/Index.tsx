@@ -1,9 +1,9 @@
 import React, { Suspense, lazy } from "react"
 import { HeroSection } from "@/components/sections/HeroSection"
+import { BenefitsSection } from "@/components/sections/BenefitsSection"
 import { LazySection } from "@/components/ui/lazy-section"
 
-// Lazy load non-critical sections
-const BenefitsSection = lazy(() => import("@/components/sections/BenefitsSection").then(m => ({ default: m.BenefitsSection })))
+// Lazy load non-critical sections only
 const PricingSection = lazy(() => import("@/components/sections/PricingSection").then(m => ({ default: m.PricingSection })))
 const TestimonialsSection = lazy(() => import("@/components/sections/TestimonialsSection").then(m => ({ default: m.TestimonialsSection })))
 const ComparisonSection = lazy(() => import("@/components/sections/ComparisonSection").then(m => ({ default: m.ComparisonSection })))
@@ -32,15 +32,11 @@ const SectionSkeleton = () => (
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      {/* Critical: Always load immediately */}
+      {/* Critical: Always load immediately - TOP PRIORITY */}
       <HeroSection />
       
-      {/* Lazy load with intersection observer */}
-      <LazySection rootMargin="200px">
-        <Suspense fallback={<SectionSkeleton />}>
-          <BenefitsSection />
-        </Suspense>
-      </LazySection>
+      {/* Second priority: Load immediately without lazy loading */}
+      <BenefitsSection />
 
       <LazySection>
         <Suspense fallback={<SectionSkeleton />}>

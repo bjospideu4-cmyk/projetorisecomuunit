@@ -6,7 +6,16 @@ export function HeroSection() {
   const handleScrollToBenefits = useCallback(() => {
     const benefitsSection = document.getElementById('benefits-section');
     if (benefitsSection) {
-      benefitsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // Use smooth scroll with optimized settings
+      document.documentElement.classList.add('smooth-scroll');
+      benefitsSection.scrollIntoView({ 
+        behavior: 'smooth', 
+        block: 'start'
+      });
+      // Remove smooth scroll after animation
+      setTimeout(() => {
+        document.documentElement.classList.remove('smooth-scroll');
+      }, 1000);
     }
   }, []);
 

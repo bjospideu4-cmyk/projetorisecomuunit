@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/carousel"
 import { AspectRatio } from "@/components/ui/aspect-ratio"
 import { LazyImage } from "@/components/ui/lazy-image"
+import { useIntersectionObserver } from "@/hooks/useIntersectionObserver"
 
 const testimonials = [
   "https://assets.zyrosite.com/A1az6jRbQRIEyj59/01-t-Yg2457Xobqh14GnV.png",
@@ -41,6 +42,11 @@ const MemoizedTestimonialSlide = React.memo(TestimonialSlide)
 export function TestimonialsCarousel() {
   const [api, setApi] = useState<CarouselApi | undefined>(undefined)
   const autoplayRef = useRef<number | null>(null)
+  const { elementRef, isIntersecting } = useIntersectionObserver({
+    threshold: 0.3,
+    rootMargin: '100px',
+    triggerOnce: false
+  })
 
   const stop = useCallback(() => {
     if (autoplayRef.current) {
@@ -50,7 +56,7 @@ export function TestimonialsCarousel() {
   }, [])
 
   const start = useCallback(() => {
-    if (!api) return
+    if (!api || !isIntersecting) return
     stop()
     autoplayRef.current = window.setInterval(() => {
       if (api.canScrollNext()) {
@@ -59,16 +65,21 @@ export function TestimonialsCarousel() {
         api.scrollTo(0)
       }
     }, 4000)
-  }, [api, stop])
+  }, [api, stop, isIntersecting])
 
   useEffect(() => {
     if (!api) return
-    start()
+    if (isIntersecting) {
+      start()
+    } else {
+      stop()
+    }
     return stop
-  }, [api, start, stop])
+  }, [api, start, stop, isIntersecting])
 
   return (
     <div
+      ref={elementRef}
       className="relative w-full max-w-[420px] mx-auto"
       onMouseEnter={stop}
       onMouseLeave={start}

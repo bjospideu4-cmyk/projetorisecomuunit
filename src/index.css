@@ -166,6 +166,15 @@ All colors MUST be HSL.
     }
   }
 
+  html {
+    scroll-behavior: auto;
+    scroll-padding-top: 2rem;
+  }
+
+  .smooth-scroll {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
