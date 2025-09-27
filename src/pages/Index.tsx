@@ -5,6 +5,7 @@ import { TestimonialsSection } from "@/components/sections/TestimonialsSection"
 import { ComparisonSection } from "@/components/sections/ComparisonSection"
 import { FinalOfferSection } from "@/components/sections/FinalOfferSection"
 import { FaqSection } from "@/components/sections/FaqSection"
+import { WhatsAppContactSection } from "@/components/sections/WhatsAppContactSection"
 import { FooterSection } from "@/components/sections/FooterSection"
 
 const Index = () => {
@@ -17,6 +18,7 @@ const Index = () => {
       <ComparisonSection />
       <FinalOfferSection />
       <FaqSection />
+      <WhatsAppContactSection />
       <FooterSection />
     </div>
   );
