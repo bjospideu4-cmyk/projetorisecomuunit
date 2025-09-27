@@ -6,7 +6,7 @@ export function HeroSection() {
   const handleScrollToBenefits = useCallback(() => {
     const benefitsSection = document.getElementById('benefits-section');
     if (benefitsSection) {
-      benefitsSection.scrollIntoView({ behavior: 'smooth' });
+      benefitsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }, []);
 

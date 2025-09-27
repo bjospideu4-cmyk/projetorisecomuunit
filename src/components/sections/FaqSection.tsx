@@ -51,16 +51,16 @@ export function FaqSection() {
             <div className="w-24 h-1 bg-gradient-primary mx-auto rounded-full" />
           </div>
 
-          <div className="bg-gradient-card rounded-3xl border border-white/10 p-6 shadow-card hover:shadow-glow transition-all duration-500">
+          <div className="bg-gradient-card rounded-3xl border border-white/10 p-6 shadow-card">
             <Accordion type="single" collapsible className="space-y-4">
               {faqItems.map((item, index) => (
                 <AccordionItem 
                   key={index} 
                   value={`item-${index}`}
-                  className="border border-white/20 rounded-xl px-6 py-2 data-[state=open]:bg-gradient-primary/10 hover:bg-white/5 transition-all duration-300"
+                  className="border border-white/20 rounded-xl px-6 py-2 data-[state=open]:bg-gradient-primary/10 hover:bg-white/5 transition-colors duration-200"
                 >
-                  <AccordionTrigger className="text-left hover:text-rise-orange hover:no-underline font-semibold">
-                    <span className="text-rise-red mr-3 transition-transform duration-300">▶</span>
+                  <AccordionTrigger className="text-left hover:text-rise-orange hover:no-underline font-semibold transition-colors duration-200">
+                    <span className="text-rise-red mr-3">▶</span>
                     {item.question}
                   </AccordionTrigger>
                   <AccordionContent className="text-rise-gray pt-4 pb-2 ml-8 leading-relaxed">

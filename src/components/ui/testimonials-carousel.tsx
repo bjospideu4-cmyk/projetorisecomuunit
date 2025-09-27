@@ -24,22 +24,21 @@ function TestimonialSlide({ src, index }: { src: string; index: number }) {
   const [failed, setFailed] = useState(false)
 
   return (
-    <div className="relative overflow-hidden shadow-card" style={{ borderRadius: '32px' }}>
-      <AspectRatio ratio={9 / 19.5} style={{ borderRadius: '32px' }}>
+    <div className="relative overflow-hidden shadow-card rounded-[32px] will-change-transform">
+      <AspectRatio ratio={9 / 19.5} className="rounded-[32px]">
         {!loaded && (
           <div
-            className="absolute inset-0 bg-gradient-glow/40 animate-pulse"
-            style={{ borderRadius: '32px' }}
+            className="absolute inset-0 bg-gradient-glow/40 animate-pulse rounded-[32px]"
             aria-hidden
           />
         )}
         <img
           src={failed ? "/placeholder.svg" : src}
           alt={`Depoimento ${index + 1} (formato em pé)`}
-          className="block w-full h-full object-contain bg-transparent"
-          style={{ borderRadius: '32px' }}
+          className="block w-full h-full object-contain bg-transparent rounded-[32px] transform-gpu"
           loading="lazy"
           decoding="async"
+          fetchPriority={index < 2 ? "high" : "low"}
           onLoad={() => setLoaded(true)}
           onError={() => {
             setFailed(true)
@@ -68,8 +67,12 @@ export function TestimonialsCarousel() {
     if (!api) return
     stop()
     autoplayRef.current = window.setInterval(() => {
-      api.scrollNext()
-    }, 3000)
+      if (api.canScrollNext()) {
+        api.scrollNext()
+      } else {
+        api.scrollTo(0)
+      }
+    }, 4000)
   }
 
   useEffect(() => {
