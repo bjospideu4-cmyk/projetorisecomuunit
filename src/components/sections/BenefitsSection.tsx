@@ -104,7 +104,7 @@ export function BenefitsSection() {
                       <LazyImage 
                         src="https://i.ibb.co/rfQ26p8F/mockup-left.png" 
                         alt="Rise Community Interface" 
-                        className="w-full h-full object-cover rounded-lg"
+                        className="w-full h-full object-contain rounded-lg"
                         wrapperClassName="w-full h-full"
                         priority={true}
                       />
@@ -242,7 +242,7 @@ export function BenefitsSection() {
                       <LazyImage 
                         src="https://i.ibb.co/0R0ynCfB/mockup-right.png" 
                         alt="Rise Community Interface" 
-                        className="w-full h-full object-cover rounded-lg"
+                        className="w-full h-full object-contain rounded-lg"
                         wrapperClassName="w-full h-full"
                         priority={true}
                       />
