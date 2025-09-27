@@ -35,9 +35,9 @@ const faqItems = [
 export function FaqSection() {
   return (
     <section className="py-20 bg-gradient-hero relative overflow-hidden">
-      {/* Background effects */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-rise-red/5 rounded-full blur-3xl" />
-      <div className="absolute top-0 right-0 w-72 h-72 bg-rise-orange/5 rounded-full blur-3xl" />
+      {/* Background effects - hidden on mobile to reduce GPU cost */}
+      <div className="hidden md:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-rise-red/5 rounded-full blur-3xl" />
+      <div className="hidden md:block absolute top-0 right-0 w-72 h-72 bg-rise-orange/5 rounded-full blur-3xl" />
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto">

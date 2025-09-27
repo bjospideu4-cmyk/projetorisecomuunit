@@ -13,10 +13,10 @@ export function LazySection({
   children, 
   className,
   fallback,
-  rootMargin = '300px'
+  rootMargin = '1200px'
 }: LazySectionProps) {
   const { elementRef, isIntersecting } = useIntersectionObserver({
-    threshold: 0.05,
+    threshold: 0.01,
     rootMargin,
     triggerOnce: true
   })

@@ -36,9 +36,9 @@ const benefits = [
 export function BenefitsSection() {
   return (
     <section id="benefits-section" className="py-20 bg-gradient-hero relative overflow-hidden">
-      {/* Background effects */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-rise-orange/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 left-0 w-72 h-72 bg-rise-red/5 rounded-full blur-3xl" />
+      {/* Background effects - hidden on mobile to reduce GPU cost */}
+      <div className="hidden md:block absolute top-0 right-0 w-96 h-96 bg-rise-orange/5 rounded-full blur-3xl" />
+      <div className="hidden md:block absolute bottom-0 left-0 w-72 h-72 bg-rise-red/5 rounded-full blur-3xl" />
       
       <div className="container mx-auto px-2 sm:px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -109,9 +109,9 @@ export function BenefitsSection() {
                         priority={true}
                       />
                       {/* Ultra-realistic screen reflection layers */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-white/12 via-transparent to-black/25 pointer-events-none"></div>
-                      <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/4 to-transparent pointer-events-none"></div>
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/2 to-transparent transform skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-2000 pointer-events-none"></div>
+<div className="hidden md:block absolute inset-0 bg-gradient-to-br from-white/12 via-transparent to-black/25 pointer-events-none"></div>
+<div className="hidden md:block absolute inset-0 bg-gradient-to-tr from-transparent via-white/4 to-transparent pointer-events-none"></div>
+<div className="hidden md:block absolute inset-0 bg-gradient-to-r from-transparent via-white/2 to-transparent transform skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-2000 pointer-events-none"></div>
                     </div>
                     
                     {/* Ultra-realistic side buttons with extreme metallic detail */}
@@ -247,9 +247,9 @@ export function BenefitsSection() {
                         priority={true}
                       />
                       {/* Ultra-realistic screen reflection layers */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-white/12 via-transparent to-black/25 pointer-events-none"></div>
-                      <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/4 to-transparent pointer-events-none"></div>
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/2 to-transparent transform skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-2200 pointer-events-none"></div>
+<div className="hidden md:block absolute inset-0 bg-gradient-to-br from-white/12 via-transparent to-black/25 pointer-events-none"></div>
+<div className="hidden md:block absolute inset-0 bg-gradient-to-tr from-transparent via-white/4 to-transparent pointer-events-none"></div>
+<div className="hidden md:block absolute inset-0 bg-gradient-to-r from-transparent via-white/2 to-transparent transform skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-2200 pointer-events-none"></div>
                     </div>
                     
                     {/* Ultra-realistic side buttons with extreme metallic detail */}

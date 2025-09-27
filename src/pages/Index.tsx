@@ -1,10 +1,10 @@
-import React, { Suspense, lazy } from "react"
+import React, { Suspense, lazy, useEffect } from "react"
 import { HeroSection } from "@/components/sections/HeroSection"
 import { BenefitsSection } from "@/components/sections/BenefitsSection"
+import { PricingSection } from "@/components/sections/PricingSection"
 import { LazySection } from "@/components/ui/lazy-section"
 
 // Lazy load non-critical sections only
-const PricingSection = lazy(() => import("@/components/sections/PricingSection").then(m => ({ default: m.PricingSection })))
 const TestimonialsSection = lazy(() => import("@/components/sections/TestimonialsSection").then(m => ({ default: m.TestimonialsSection })))
 const ComparisonSection = lazy(() => import("@/components/sections/ComparisonSection").then(m => ({ default: m.ComparisonSection })))
 const FinalOfferSection = lazy(() => import("@/components/sections/FinalOfferSection").then(m => ({ default: m.FinalOfferSection })))
@@ -30,6 +30,22 @@ const SectionSkeleton = () => (
 )
 
 const Index = () => {
+  // Prefetch below-the-fold sections as soon as the main thread is idle
+  useEffect(() => {
+    const prefetch = () => {
+      import("@/components/sections/TestimonialsSection")
+      import("@/components/sections/ComparisonSection")
+      import("@/components/sections/FinalOfferSection")
+      import("@/components/sections/FaqSection")
+      import("@/components/sections/WhatsAppContactSection")
+      import("@/components/sections/FooterSection")
+    }
+    if ("requestIdleCallback" in window) {
+      ;(window as any).requestIdleCallback(prefetch)
+    } else {
+      setTimeout(prefetch, 0)
+    }
+  }, [])
   return (
     <div className="min-h-screen bg-background">
       {/* Critical: Always load immediately - TOP PRIORITY */}
@@ -38,43 +54,39 @@ const Index = () => {
       {/* Second priority: Load immediately without lazy loading */}
       <BenefitsSection />
 
-      <LazySection>
-        <Suspense fallback={<SectionSkeleton />}>
-          <PricingSection />
-        </Suspense>
-      </LazySection>
+      <PricingSection />
 
-      <LazySection>
+      <LazySection rootMargin="1200px">
         <Suspense fallback={<SectionSkeleton />}>
           <TestimonialsSection />
         </Suspense>
       </LazySection>
 
-      <LazySection>
+      <LazySection rootMargin="1200px">
         <Suspense fallback={<SectionSkeleton />}>
           <ComparisonSection />
         </Suspense>
       </LazySection>
 
-      <LazySection>
+      <LazySection rootMargin="1200px">
         <Suspense fallback={<SectionSkeleton />}>
           <FinalOfferSection />
         </Suspense>
       </LazySection>
 
-      <LazySection>
+      <LazySection rootMargin="1200px">
         <Suspense fallback={<SectionSkeleton />}>
           <FaqSection />
         </Suspense>
       </LazySection>
 
-      <LazySection>
+      <LazySection rootMargin="1200px">
         <Suspense fallback={<SectionSkeleton />}>
           <WhatsAppContactSection />
         </Suspense>
       </LazySection>
 
-      <LazySection>
+      <LazySection rootMargin="1200px">
         <Suspense fallback={<SectionSkeleton />}>
           <FooterSection />
         </Suspense>
