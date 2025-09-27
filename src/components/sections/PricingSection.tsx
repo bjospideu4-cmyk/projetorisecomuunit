@@ -25,37 +25,37 @@ export function PricingSection() {
             </p>
             
 
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-5">
-              <article className="group rounded-xl md:rounded-2xl bg-gradient-card ring-1 ring-white/10 border border-white/10 p-3 md:p-4 hover:ring-rise-red/25 hover:border-rise-red/25 hover:shadow-elegant transition-all duration-300">
-                <header className="flex items-center gap-1.5">
-                  <span className="inline-flex w-5 justify-center text-base md:text-lg leading-none shrink-0 relative top-px">📅</span>
-                  <h3 className="text-[15px] md:text-base font-extrabold leading-tight">Atualizações Semanais</h3>
-                </header>
-                <p className="mt-1.5 text-[13px] md:text-sm text-rise-gray leading-relaxed">Toda semana novos cursos, apostilas e ferramentas adicionados ao acervo, garantindo conteúdo sempre atualizado.</p>
+            <div className="grid gap-5" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }}>
+              <article className="group rounded-2xl bg-gradient-card ring-1 ring-white/10 border border-white/10 p-5 md:p-6 text-left hover:ring-rise-red/25 hover:border-rise-red/25 hover:shadow-elegant transition-all duration-300">
+                <h3 className="text-lg md:text-xl font-bold mb-2.5 flex items-center gap-2">
+                  <span className="text-xl md:text-2xl leading-none">📅</span>
+                  Atualizações Semanais
+                </h3>
+                <p className="text-[15px] md:text-base text-rise-gray leading-relaxed m-0">Toda semana novos cursos, apostilas e ferramentas adicionados ao acervo, garantindo conteúdo sempre atualizado.</p>
               </article>
               
-              <article className="group rounded-xl md:rounded-2xl bg-gradient-card ring-1 ring-white/10 border border-white/10 p-3 md:p-4 hover:ring-rise-red/25 hover:border-rise-red/25 hover:shadow-elegant transition-all duration-300">
-                <header className="flex items-center gap-1.5">
-                  <span className="inline-flex w-5 justify-center text-base md:text-lg leading-none shrink-0 relative top-px">🤖</span>
-                  <h3 className="text-[15px] md:text-base font-extrabold leading-tight">Agentes de IA Exclusivos</h3>
-                </header>
-                <p className="mt-1.5 text-[13px] md:text-sm text-rise-gray leading-relaxed">Ferramentas inteligentes criadas para turbinar seus estudos, negócios e automações.</p>
+              <article className="group rounded-2xl bg-gradient-card ring-1 ring-white/10 border border-white/10 p-5 md:p-6 text-left hover:ring-rise-red/25 hover:border-rise-red/25 hover:shadow-elegant transition-all duration-300">
+                <h3 className="text-lg md:text-xl font-bold mb-2.5 flex items-center gap-2">
+                  <span className="text-xl md:text-2xl leading-none">🤖</span>
+                  Agentes de IA Exclusivos
+                </h3>
+                <p className="text-[15px] md:text-base text-rise-gray leading-relaxed m-0">Ferramentas inteligentes criadas para turbinar seus estudos, negócios e automações.</p>
               </article>
 
-              <article className="group rounded-xl md:rounded-2xl bg-gradient-card ring-1 ring-white/10 border border-white/10 p-3 md:p-4 hover:ring-rise-red/25 hover:border-rise-red/25 hover:shadow-elegant transition-all duration-300">
-                <header className="flex items-center gap-1.5">
-                  <span className="inline-flex w-5 justify-center text-base md:text-lg leading-none shrink-0 relative top-px">🔍</span>
-                  <h3 className="text-[15px] md:text-base font-extrabold leading-tight">Puxador de Dados Vitalício</h3>
-                </header>
-                <p className="mt-1.5 text-[13px] md:text-sm text-rise-gray leading-relaxed">Tenha acesso ao nosso Puxador de Dados exclusivo da Rise Community, funcionando 24/7, com puxadas ilimitadas e acesso vitalício garantido.</p>
+              <article className="group rounded-2xl bg-gradient-card ring-1 ring-white/10 border border-white/10 p-5 md:p-6 text-left hover:ring-rise-red/25 hover:border-rise-red/25 hover:shadow-elegant transition-all duration-300">
+                <h3 className="text-lg md:text-xl font-bold mb-2.5 flex items-center gap-2">
+                  <span className="text-xl md:text-2xl leading-none">🔍</span>
+                  Puxador de Dados Vitalício
+                </h3>
+                <p className="text-[15px] md:text-base text-rise-gray leading-relaxed m-0">Tenha acesso ao nosso <strong>Puxador de Dados exclusivo da Rise Community</strong>, funcionando <strong>24/7</strong>, com <strong>puxadas ilimitadas</strong> e acesso vitalício garantido.</p>
               </article>
 
-              <article className="group rounded-xl md:rounded-2xl bg-gradient-card ring-1 ring-white/10 border border-white/10 p-3 md:p-4 hover:ring-rise-red/25 hover:border-rise-red/25 hover:shadow-elegant transition-all duration-300">
-                <header className="flex items-center gap-1.5">
-                  <span className="inline-flex w-5 justify-center text-base md:text-lg leading-none shrink-0 relative top-px">📦</span>
-                  <h3 className="text-[15px] md:text-base font-extrabold leading-tight">Fornecedores de Rateio</h3>
-                </header>
-                <p className="mt-1.5 text-[13px] md:text-sm text-rise-gray leading-relaxed">Após anos guardando a 7 chaves, liberamos acesso aos principais fornecedores utilizados atualmente pela comunidade.</p>
+              <article className="group rounded-2xl bg-gradient-card ring-1 ring-white/10 border border-white/10 p-5 md:p-6 text-left hover:ring-rise-red/25 hover:border-rise-red/25 hover:shadow-elegant transition-all duration-300">
+                <h3 className="text-lg md:text-xl font-bold mb-2.5 flex items-center gap-2">
+                  <span className="text-xl md:text-2xl leading-none">📦</span>
+                  Fornecedores de Rateio
+                </h3>
+                <p className="text-[15px] md:text-base text-rise-gray leading-relaxed m-0">Após anos guardando a 7 chaves, liberamos acesso aos principais fornecedores utilizados atualmente pela comunidade.</p>
               </article>
             </div>
             </div>
