@@ -25,37 +25,37 @@ export function PricingSection() {
             </p>
             
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
-              <article className="group rounded-2xl bg-gradient-card border border-white/20 p-4 hover:border-rise-red/40 hover:shadow-elegant transition-all duration-300">
-                <header className="flex items-center gap-2 mb-1">
-                  <span className="text-xl leading-none shrink-0">📅</span>
-                  <h3 className="text-base md:text-lg font-bold leading-tight tracking-tight">Atualizações Semanaais</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-5">
+              <article className="group rounded-xl md:rounded-2xl bg-gradient-card ring-1 ring-white/10 border border-white/10 p-3 md:p-4 hover:ring-rise-red/25 hover:border-rise-red/25 hover:shadow-elegant transition-all duration-300">
+                <header className="flex items-center gap-1.5">
+                  <span className="inline-flex w-5 justify-center text-base md:text-lg leading-none shrink-0 relative top-px">📅</span>
+                  <h3 className="text-[15px] md:text-base font-extrabold leading-tight">Atualizações Semanais</h3>
                 </header>
-                <p className="text-sm text-rise-gray leading-relaxed">Toda semana novos cursos, apostilas e ferramentas adicionados ao acervo, garantindo conteúdo sempre atualizado.</p>
+                <p className="mt-1.5 text-[13px] md:text-sm text-rise-gray leading-relaxed">Toda semana novos cursos, apostilas e ferramentas adicionados ao acervo, garantindo conteúdo sempre atualizado.</p>
               </article>
               
-              <article className="group rounded-2xl bg-gradient-card border border-white/20 p-4 hover:border-rise-red/40 hover:shadow-elegant transition-all duration-300">
-                <header className="flex items-center gap-2 mb-1">
-                  <span className="text-xl leading-none shrink-0">🤖</span>
-                  <h3 className="text-base md:text-lg font-bold leading-tight tracking-tight">Agentes de IA Exclusivos</h3>
+              <article className="group rounded-xl md:rounded-2xl bg-gradient-card ring-1 ring-white/10 border border-white/10 p-3 md:p-4 hover:ring-rise-red/25 hover:border-rise-red/25 hover:shadow-elegant transition-all duration-300">
+                <header className="flex items-center gap-1.5">
+                  <span className="inline-flex w-5 justify-center text-base md:text-lg leading-none shrink-0 relative top-px">🤖</span>
+                  <h3 className="text-[15px] md:text-base font-extrabold leading-tight">Agentes de IA Exclusivos</h3>
                 </header>
-                <p className="text-sm text-rise-gray leading-relaxed">Ferramentas inteligentes criadas para turbinar seus estudos, negócios e automações.</p>
+                <p className="mt-1.5 text-[13px] md:text-sm text-rise-gray leading-relaxed">Ferramentas inteligentes criadas para turbinar seus estudos, negócios e automações.</p>
               </article>
 
-              <article className="group rounded-2xl bg-gradient-card border border-white/20 p-4 hover:border-rise-red/40 hover:shadow-elegant transition-all duration-300">
-                <header className="flex items-center gap-2 mb-1">
-                  <span className="text-xl leading-none shrink-0">🔍</span>
-                  <h3 className="text-base md:text-lg font-bold leading-tight tracking-tight">Puxador de Dados Vitalício</h3>
+              <article className="group rounded-xl md:rounded-2xl bg-gradient-card ring-1 ring-white/10 border border-white/10 p-3 md:p-4 hover:ring-rise-red/25 hover:border-rise-red/25 hover:shadow-elegant transition-all duration-300">
+                <header className="flex items-center gap-1.5">
+                  <span className="inline-flex w-5 justify-center text-base md:text-lg leading-none shrink-0 relative top-px">🔍</span>
+                  <h3 className="text-[15px] md:text-base font-extrabold leading-tight">Puxador de Dados Vitalício</h3>
                 </header>
-                <p className="text-sm text-rise-gray leading-relaxed">Tenha acesso ao nosso Puxador de Dados exclusivo da Rise Community, funcionando 24/7, com puxadas ilimitadas e acesso vitalício garantido.</p>
+                <p className="mt-1.5 text-[13px] md:text-sm text-rise-gray leading-relaxed">Tenha acesso ao nosso Puxador de Dados exclusivo da Rise Community, funcionando 24/7, com puxadas ilimitadas e acesso vitalício garantido.</p>
               </article>
 
-              <article className="group rounded-2xl bg-gradient-card border border-white/20 p-4 hover:border-rise-red/40 hover:shadow-elegant transition-all duration-300">
-                <header className="flex items-center gap-2 mb-1">
-                  <span className="text-xl leading-none shrink-0">📦</span>
-                  <h3 className="text-base md:text-lg font-bold leading-tight tracking-tight">Fornecedores de Rateio</h3>
+              <article className="group rounded-xl md:rounded-2xl bg-gradient-card ring-1 ring-white/10 border border-white/10 p-3 md:p-4 hover:ring-rise-red/25 hover:border-rise-red/25 hover:shadow-elegant transition-all duration-300">
+                <header className="flex items-center gap-1.5">
+                  <span className="inline-flex w-5 justify-center text-base md:text-lg leading-none shrink-0 relative top-px">📦</span>
+                  <h3 className="text-[15px] md:text-base font-extrabold leading-tight">Fornecedores de Rateio</h3>
                 </header>
-                <p className="text-sm text-rise-gray leading-relaxed">Após anos guardando a 7 chaves, liberamos acesso aos principais fornecedores utilizados atualmente pela comunidade.</p>
+                <p className="mt-1.5 text-[13px] md:text-sm text-rise-gray leading-relaxed">Após anos guardando a 7 chaves, liberamos acesso aos principais fornecedores utilizados atualmente pela comunidade.</p>
               </article>
             </div>
             </div>
