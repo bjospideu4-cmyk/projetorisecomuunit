@@ -13,7 +13,7 @@ interface LazyImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
 export function LazyImage({ 
   src, 
   alt, 
-  placeholder = '/placeholder.svg',
+  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIwIiBoZWlnaHQ9IjMyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PC9zdmc+',
   className,
   wrapperClassName,
   priority = false,
