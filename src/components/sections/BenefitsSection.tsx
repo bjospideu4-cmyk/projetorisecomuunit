@@ -101,12 +101,12 @@ export function BenefitsSection() {
                       `
                     }}>
                       {/* App content */}
-                      <LazyImage 
-                        src="https://i.ibb.co/rfQ26p8F/mockup-left.png" 
+                      <img 
+                        src="https://i.ibb.co/CswK79Cm/Whats-App-Image-2025-09-27-at-12-50-09-1.jpg" 
                         alt="Rise Community Interface" 
-                        className="w-full h-full object-contain rounded-lg"
-                        wrapperClassName="w-full h-full"
-                        priority={true}
+                        className="w-full h-full object-cover object-center rounded-lg"
+                        loading="eager"
+                        decoding="async"
                       />
                       {/* Ultra-realistic screen reflection layers */}
 <div className="hidden md:block absolute inset-0 bg-gradient-to-br from-white/12 via-transparent to-black/25 pointer-events-none"></div>
@@ -239,12 +239,12 @@ export function BenefitsSection() {
                       `
                     }}>
                       {/* App content */}
-                      <LazyImage 
-                        src="https://i.ibb.co/0R0ynCfB/mockup-right.png" 
+                      <img 
+                        src="https://i.ibb.co/rfQ26p8F/Whats-App-Image-2025-09-27-at-12-50-09-1.jpg" 
                         alt="Rise Community Interface" 
-                        className="w-full h-full object-contain rounded-lg"
-                        wrapperClassName="w-full h-full"
-                        priority={true}
+                        className="w-full h-full object-cover object-center rounded-lg"
+                        loading="eager"
+                        decoding="async"
                       />
                       {/* Ultra-realistic screen reflection layers */}
 <div className="hidden md:block absolute inset-0 bg-gradient-to-br from-white/12 via-transparent to-black/25 pointer-events-none"></div>
