@@ -1,4 +1,6 @@
+import React from "react"
 import { CheckCircle2 } from "lucide-react"
+import { LazyImage } from "@/components/ui/lazy-image"
 import mockupImageLeft from "@/assets/mockup-image-left.png"
 import mockupImage2 from "@/assets/mockup-image-2.png"
 
@@ -99,10 +101,12 @@ export function BenefitsSection() {
                       `
                     }}>
                       {/* App content */}
-                      <img 
+                      <LazyImage 
                         src={mockupImageLeft} 
                         alt="Rise Community Interface" 
                         className="w-full h-full object-contain"
+                        wrapperClassName="w-full h-full"
+                        priority={true}
                       />
                       {/* Ultra-realistic screen reflection layers */}
                       <div className="absolute inset-0 bg-gradient-to-br from-white/12 via-transparent to-black/25 pointer-events-none"></div>
@@ -235,10 +239,12 @@ export function BenefitsSection() {
                       `
                     }}>
                       {/* App content */}
-                      <img 
+                      <LazyImage 
                         src={mockupImage2} 
                         alt="Rise Community Interface" 
                         className="w-full h-full object-contain"
+                        wrapperClassName="w-full h-full"
+                        priority={true}
                       />
                       {/* Ultra-realistic screen reflection layers */}
                       <div className="absolute inset-0 bg-gradient-to-br from-white/12 via-transparent to-black/25 pointer-events-none"></div>

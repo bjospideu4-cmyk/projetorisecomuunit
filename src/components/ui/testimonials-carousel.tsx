@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react"
+import React, { useEffect, useRef, useState, useCallback } from "react"
 import {
   Carousel,
   CarouselContent,
@@ -8,6 +8,7 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel"
 import { AspectRatio } from "@/components/ui/aspect-ratio"
+import { LazyImage } from "@/components/ui/lazy-image"
 
 const testimonials = [
   "https://assets.zyrosite.com/A1az6jRbQRIEyj59/01-t-Yg2457Xobqh14GnV.png",
@@ -20,30 +21,15 @@ const testimonials = [
 ]
 
 function TestimonialSlide({ src, index }: { src: string; index: number }) {
-  const [loaded, setLoaded] = useState(false)
-  const [failed, setFailed] = useState(false)
-
   return (
     <div className="relative overflow-hidden shadow-card rounded-[32px] will-change-transform">
       <AspectRatio ratio={9 / 19.5} className="rounded-[32px]">
-        {!loaded && (
-          <div
-            className="absolute inset-0 bg-gradient-glow/40 animate-pulse rounded-[32px]"
-            aria-hidden
-          />
-        )}
-        <img
-          src={failed ? "/placeholder.svg" : src}
+        <LazyImage
+          src={src}
           alt={`Depoimento ${index + 1} (formato em pé)`}
           className="block w-full h-full object-contain bg-transparent rounded-[32px] transform-gpu"
-          loading="lazy"
-          decoding="async"
-          fetchPriority={index < 2 ? "high" : "low"}
-          onLoad={() => setLoaded(true)}
-          onError={() => {
-            setFailed(true)
-            setLoaded(true)
-          }}
+          wrapperClassName="w-full h-full rounded-[32px]"
+          priority={index < 2}
         />
       </AspectRatio>
     </div>
@@ -56,14 +42,14 @@ export function TestimonialsCarousel() {
   const [api, setApi] = useState<CarouselApi | undefined>(undefined)
   const autoplayRef = useRef<number | null>(null)
 
-  const stop = () => {
+  const stop = useCallback(() => {
     if (autoplayRef.current) {
       window.clearInterval(autoplayRef.current)
       autoplayRef.current = null
     }
-  }
+  }, [])
 
-  const start = () => {
+  const start = useCallback(() => {
     if (!api) return
     stop()
     autoplayRef.current = window.setInterval(() => {
@@ -73,13 +59,13 @@ export function TestimonialsCarousel() {
         api.scrollTo(0)
       }
     }, 4000)
-  }
+  }, [api, stop])
 
   useEffect(() => {
     if (!api) return
     start()
     return stop
-  }, [api])
+  }, [api, start, stop])
 
   return (
     <div
