@@ -126,7 +126,7 @@ export function FinalOfferSection() {
                     {/* Mastercard */}
                     <div className="flex items-center justify-center h-10 w-16">
                       <img 
-                        src="https://i.postimg.cc/9f5K8QLX/mastercard-icon.webp" 
+                        src={mastercardIcon} 
                         alt="Mastercard" 
                         className="h-full w-full object-contain opacity-70"
                       />
@@ -141,7 +141,7 @@ export function FinalOfferSection() {
                     {/* PIX */}
                     <div className="flex items-center justify-center h-10 w-16">
                       <img 
-                        src="https://i.postimg.cc/TYKqxZrJ/pix-icon.webp" 
+                        src={pixIcon} 
                         alt="PIX" 
                         className="h-full w-full object-contain opacity-70"
                       />

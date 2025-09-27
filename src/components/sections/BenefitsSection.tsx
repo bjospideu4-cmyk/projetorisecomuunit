@@ -102,7 +102,7 @@ export function BenefitsSection() {
                     }}>
                       {/* App content */}
                       <LazyImage 
-                        src="https://i.postimg.cc/TPdWgKfG/mockup-image-left.webp" 
+                        src="https://raw.githubusercontent.com/user/repo/main/mockup-image-left.png" 
                         alt="Rise Community Interface" 
                         className="w-full h-full object-contain"
                         wrapperClassName="w-full h-full"
@@ -240,7 +240,7 @@ export function BenefitsSection() {
                     }}>
                       {/* App content */}
                       <LazyImage 
-                        src="https://i.postimg.cc/nrjYBb8n/mockup-image-2.webp" 
+                        src="https://raw.githubusercontent.com/user/repo/main/mockup-image-2.png" 
                         alt="Rise Community Interface" 
                         className="w-full h-full object-contain"
                         wrapperClassName="w-full h-full"
